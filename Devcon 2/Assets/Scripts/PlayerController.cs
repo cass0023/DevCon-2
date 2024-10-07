@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -11,13 +12,18 @@ public class PlayerController : MonoBehaviour
     public KeyCode left;
     public KeyCode right;
     public float moveSpeed = 10f;
+    public float jumpPower = 5f;
     public bool interact = false;
     public bool facingRight = true;
+
+    public Animator anim;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -42,9 +48,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(left))
         {
             transform.Translate(new Vector2(-1, 0) * moveSpeed * Time.deltaTime);
-            if(facingRight){
+            if (facingRight) {
                 ChangeDirection();
             }
+    
         }
         //checks if player is pressing left mouse button
         if(Input.GetKeyDown(KeyCode.Mouse0)){
@@ -53,6 +60,9 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Mouse0)){
             interact = false;
         }
+
+        anim.SetFloat("Speed", Mathf.Abs(moveSpeed));
+
     }
     public void ChangeDirection(){
         //changes the players x scale to -1 so the sprite flips when changing direction -cc
@@ -62,4 +72,15 @@ public class PlayerController : MonoBehaviour
         gameObject.transform.localScale = currentScale;
         facingRight = !facingRight;
     }
+
+    private void FixedUpdate()
+    {
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+    }
+
 }
