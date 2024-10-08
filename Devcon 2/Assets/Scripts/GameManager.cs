@@ -1,9 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+
+    //UI TextMeshPros
+    public TextMeshProUGUI butterflyCounter;
+    public TextMeshProUGUI frogCounter;
+    public TextMeshProUGUI cauldronCounter;
+
     // Start is called before the first frame update
     void Start()
     {
