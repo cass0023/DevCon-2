@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     public KeyCode left;
     public KeyCode right;
     public float moveSpeed = 10f;
-    public float jumpPower = 5f;
     public bool interact = false;
     public bool facingRight = true;
 
@@ -29,7 +28,23 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Move controls
+
+
+        anim.SetFloat("Speed", Mathf.Abs(moveSpeed));
+
+    }
+    public void ChangeDirection(){
+        //changes the players x scale to -1 so the sprite flips when changing direction -cc
+        //www.youtube.com/watch?v=Cr-j7EoM8bg
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+        facingRight = !facingRight;
+    }
+
+    private void FixedUpdate()
+    {
+                //Move controls
         if (Input.GetKey(down))
         {
             transform.Translate(new Vector2(0, -1) * moveSpeed * Time.deltaTime);
@@ -60,22 +75,6 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Mouse0)){
             interact = false;
         }
-
-        anim.SetFloat("Speed", Mathf.Abs(moveSpeed));
-
-    }
-    public void ChangeDirection(){
-        //changes the players x scale to -1 so the sprite flips when changing direction -cc
-        //www.youtube.com/watch?v=Cr-j7EoM8bg
-        Vector3 currentScale = gameObject.transform.localScale;
-        currentScale.x *= -1;
-        gameObject.transform.localScale = currentScale;
-        facingRight = !facingRight;
-    }
-
-    private void FixedUpdate()
-    {
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

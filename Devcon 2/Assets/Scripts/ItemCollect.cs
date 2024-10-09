@@ -14,18 +14,12 @@ public class ItemCollect : MonoBehaviour
         //if the player clicks on this gameobj it will add to the counter in game manager
         //and will destroy the obj -cc
         //**need to add stuff to gamemanager functions to count items collected
-
         if(playerController.interact == true && collider.gameObject == collect){
             CheckObject();
             Destroy(gameObject);       
         }
-
     }
     private void CheckObject(){
-        if (gameObject.CompareTag("Rat")){
-            gameManager.RatCounter();
-            Debug.Log("Interacted with rat");
-        }
         if (gameObject.CompareTag("Frog")){
             gameManager.FrogCounter();
             Debug.Log("Interacted with frog");
