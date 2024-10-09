@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI butterflyCounter;
     public TextMeshProUGUI frogCounter;
     public TextMeshProUGUI cauldronCounter;
+    //Collectible Counters
+    private int counterButterfly;
+    private int counterFrog;
 
     // Start is called before the first frame update
     void Start()
@@ -21,16 +24,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        frogCounter.text = "" + counterFrog;
+        butterflyCounter.text = "" + counterButterfly;
+
     }
     //can be used for a ui counter / tracker of items being carried ?
-    public void RatCounter(){
-
-    }
     public void FrogCounter(){
-
+        counterFrog += 1;
     }
     public void ButterflyCounter(){
-
+        counterButterfly += 1;
     }
 }
