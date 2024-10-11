@@ -12,13 +12,19 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI frogCounter;
     public TextMeshProUGUI cauldronCounter;
     //Collectible Counters
-    private int counterButterfly;
-    private int counterFrog;
+     public int counterButterfly;
+    public int counterFrog;
+    public int sumButterfly;
+    public int sumFrog;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject[] butterflies = GameObject.FindGameObjectsWithTag("Butterfly");
+        GameObject[] frogs = GameObject.FindGameObjectsWithTag("Frog");
+
+        sumButterfly = butterflies.Length;
+        sumFrog = frogs.Length;
     }
 
     // Update is called once per frame
@@ -26,7 +32,6 @@ public class GameManager : MonoBehaviour
     {
         frogCounter.text = "" + counterFrog;
         butterflyCounter.text = "" + counterButterfly;
-
     }
     //can be used for a ui counter / tracker of items being carried ?
     public void FrogCounter(){
@@ -34,5 +39,13 @@ public class GameManager : MonoBehaviour
     }
     public void ButterflyCounter(){
         counterButterfly += 1;
+    }
+    public void ClearContents(){
+        counterButterfly = 0;
+        counterFrog = 0;
+    }
+    public void EndScene(){
+        //put code to change to end scence here! 
+        //gets called in CauldronInteract when contents in cauldron are equal to number of collectibles in scene. 
     }
 }
