@@ -23,4 +23,9 @@
 - https://www.youtube.com/watch?v=MYwlrne9NWw
 - https://www.youtube.com/watch?v=ivvv8kld6_0&t=11s
 
+---
+**Aditional Information**
+---
+**Planning of the concept.(History)**
+ - The foundation of the game was designed with a mindset of progression, telling the story of a young witch and her journey in learning magic. The player's ultimate goal will be to complete the witch's grimoire with all the potions she creates and learns about in each level, so she can graduate properly from her school of magic. Throughout this adventure, the player will need to collect the indicated ingredients in each level. The more spells the player knows, the more challenging the game will become, requiring the player to refer to their grimoire at certain times to solve puzzles and defeat various enemies. Future mechanics would include combat, skills, and other varied elements that the game's foundation allows for. A dynamic application for all ages and for those interested in magic.
 
