@@ -25,7 +25,7 @@ public class CauldronInteract : MonoBehaviour
             gameManager.EndScene();
         }
     }
-    public void OnTriggerEnter2D(Collider2D collider){
+    public void OnTriggerStay2D(Collider2D collider){
         if (collider.gameObject == collectPoint && playerController.interact == true){
             if(gameManager.counterButterfly > 0){
                int temp = gameManager.counterButterfly;
