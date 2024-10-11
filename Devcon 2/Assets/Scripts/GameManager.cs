@@ -46,6 +46,7 @@ public class GameManager : MonoBehaviour
     }
     public void EndScene(){
         //put code to change to end scence here! 
-        //gets called in CauldronInteract when contents in cauldron are equal to number of collectibles in scene. 
+        //gets called in CauldronInteract when contents in cauldron are equal to number of collectibles in scene.
+        SceneManager.LoadScene("Winner");
     }
 }
