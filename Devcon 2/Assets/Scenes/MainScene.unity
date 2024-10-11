@@ -16449,7 +16449,7 @@ Transform:
   m_GameObject: {fileID: 283066075}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.09, y: 0, z: 0}
+  m_LocalPosition: {x: 0.1387, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -16554,6 +16554,8 @@ GameObject:
   - component: {fileID: 404865196}
   - component: {fileID: 404865195}
   - component: {fileID: 404865194}
+  - component: {fileID: 404865199}
+  - component: {fileID: 404865198}
   m_Layer: 0
   m_Name: Cauldron
   m_TagString: Untagged
@@ -16694,6 +16696,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &404865198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404865193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea4f044b4beee540bab34b30e6f1886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 855435194}
+  playerController: {fileID: 1387986083}
+  cauldronButterfly: 0
+  cauldronFrog: 0
+  collectPoint: {fileID: 283066075}
+--- !u!58 &404865199
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404865193}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.42}
+  serializedVersion: 2
+  m_Radius: 2
 --- !u!1 &424446296
 GameObject:
   m_ObjectHideFlags: 0
@@ -17253,6 +17307,10 @@ MonoBehaviour:
   butterflyCounter: {fileID: 2144889840}
   frogCounter: {fileID: 1326785806}
   cauldronCounter: {fileID: 510689373}
+  counterButterfly: 0
+  counterFrog: 0
+  sumButterfly: 0
+  sumFrog: 0
 --- !u!4 &855435195
 Transform:
   m_ObjectHideFlags: 0
